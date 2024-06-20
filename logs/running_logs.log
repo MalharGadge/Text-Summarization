@@ -1,0 +1,314 @@
+[2024-06-20 14:07:54,015: INFO: server: Started server process [75272]]
+[2024-06-20 14:07:54,015: INFO: on: Waiting for application startup.]
+[2024-06-20 14:07:54,016: INFO: on: Application startup complete.]
+[2024-06-20 14:07:54,016: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-06-20 14:09:11,641: INFO: server: Started server process [75371]]
+[2024-06-20 14:09:11,641: INFO: on: Waiting for application startup.]
+[2024-06-20 14:09:11,641: INFO: on: Application startup complete.]
+[2024-06-20 14:09:11,642: ERROR: server: [Errno 48] error while attempting to bind on address ('0.0.0.0', 8080): address already in use]
+[2024-06-20 14:09:11,642: INFO: on: Waiting for application shutdown.]
+[2024-06-20 14:09:11,642: INFO: on: Application shutdown complete.]
+[2024-06-20 14:09:47,186: INFO: server: Started server process [75386]]
+[2024-06-20 14:09:47,186: INFO: on: Waiting for application startup.]
+[2024-06-20 14:09:47,186: INFO: on: Application startup complete.]
+[2024-06-20 14:09:47,186: ERROR: server: [Errno 48] error while attempting to bind on address ('0.0.0.0', 8080): address already in use]
+[2024-06-20 14:09:47,186: INFO: on: Waiting for application shutdown.]
+[2024-06-20 14:09:47,186: INFO: on: Application shutdown complete.]
+[2024-06-20 14:11:06,376: INFO: server: Started server process [75461]]
+[2024-06-20 14:11:06,377: INFO: on: Waiting for application startup.]
+[2024-06-20 14:11:06,377: INFO: on: Application startup complete.]
+[2024-06-20 14:11:06,377: ERROR: server: [Errno 48] error while attempting to bind on address ('0.0.0.0', 8080): address already in use]
+[2024-06-20 14:11:06,377: INFO: on: Waiting for application shutdown.]
+[2024-06-20 14:11:06,377: INFO: on: Application shutdown complete.]
+[2024-06-20 14:11:59,793: INFO: server: Started server process [75635]]
+[2024-06-20 14:11:59,793: INFO: on: Waiting for application startup.]
+[2024-06-20 14:11:59,793: INFO: on: Application startup complete.]
+[2024-06-20 14:11:59,793: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-06-20 14:13:51,901: INFO: server: Started server process [76240]]
+[2024-06-20 14:13:51,901: INFO: on: Waiting for application startup.]
+[2024-06-20 14:13:51,901: INFO: on: Application startup complete.]
+[2024-06-20 14:13:51,902: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-06-20 14:20:21,817: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-20 14:20:21,820: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-20 14:20:21,821: INFO: common: created directory at: artifacts]
+[2024-06-20 14:20:21,821: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-06-20 14:20:21,823: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/utils/hub.py", line 399, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/app.py", line 41, in predict_route
+    raise e
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/app.py", line 38, in predict_route
+    text = obj.predict(text)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/textSummarizer/pipeline/prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 817, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 649, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/utils/hub.py", line 463, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'artifacts/model_trainer/tokenizer'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[2024-06-20 14:21:09,248: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-20 14:21:09,250: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-20 14:21:09,251: INFO: common: created directory at: artifacts]
+[2024-06-20 14:21:09,251: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-06-20 14:21:09,251: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/utils/hub.py", line 399, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/app.py", line 41, in predict_route
+    raise e
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/app.py", line 38, in predict_route
+    text = obj.predict(text)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/textSummarizer/pipeline/prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 817, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 649, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/utils/hub.py", line 463, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'artifacts/model_trainer/tokenizer'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[2024-06-20 14:21:30,232: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-20 14:21:30,234: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-20 14:21:30,235: INFO: common: created directory at: artifacts]
+[2024-06-20 14:21:30,235: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-06-20 14:21:30,236: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/utils/hub.py", line 399, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/app.py", line 41, in predict_route
+    raise e
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/app.py", line 38, in predict_route
+    text = obj.predict(text)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/textSummarizer/pipeline/prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 817, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 649, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/utils/hub.py", line 463, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'artifacts/model_trainer/tokenizer'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
+[2024-06-20 14:21:30,878: INFO: common: yaml file: config/config.yaml loaded successfully]
+[2024-06-20 14:21:30,880: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-06-20 14:21:30,880: INFO: common: created directory at: artifacts]
+[2024-06-20 14:21:30,880: INFO: common: created directory at: artifacts/model_evaluation]
+[2024-06-20 14:21:30,881: ERROR: h11_impl: Exception in ASGI application
+]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/utils/hub.py", line 399, in cached_file
+    resolved_file = hf_hub_download(
+                    ^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 106, in _inner_fn
+    validate_repo_id(arg_value)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/huggingface_hub/utils/_validators.py", line 154, in validate_repo_id
+    raise HFValidationError(
+huggingface_hub.errors.HFValidationError: Repo id must be in the form 'repo_name' or 'namespace/repo_name': 'artifacts/model_trainer/tokenizer'. Use `repo_type` argument if needed.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/protocols/http/h11_impl.py", line 404, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/uvicorn/middleware/proxy_headers.py", line 78, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/applications.py", line 269, in __call__
+    await super().__call__(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/applications.py", line 124, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 184, in __call__
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/middleware/errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/exceptions.py", line 93, in __call__
+    raise exc
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/exceptions.py", line 82, in __call__
+    await self.app(scope, receive, sender)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 670, in __call__
+    await route.handle(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 266, in handle
+    await self.app(scope, receive, send)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/starlette/routing.py", line 65, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/routing.py", line 227, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/fastapi/routing.py", line 160, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/app.py", line 41, in predict_route
+    raise e
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/app.py", line 38, in predict_route
+    text = obj.predict(text)
+           ^^^^^^^^^^^^^^^^^
+  File "/Users/malhar.gadge/Desktop/Text-Summarization-NLP-Project-main/textSummarizer/pipeline/prediction.py", line 13, in predict
+    tokenizer = AutoTokenizer.from_pretrained(self.config.tokenizer_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 817, in from_pretrained
+    tokenizer_config = get_tokenizer_config(pretrained_model_name_or_path, **kwargs)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/models/auto/tokenization_auto.py", line 649, in get_tokenizer_config
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/transformers/utils/hub.py", line 463, in cached_file
+    raise EnvironmentError(
+OSError: Incorrect path_or_model_id: 'artifacts/model_trainer/tokenizer'. Please provide either the path to a local folder or the repo_id of a model on the Hub.
